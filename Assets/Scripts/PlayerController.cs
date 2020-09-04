@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public ButtonPressedDetector goLeftMobile, goRightMobile, fireMobile;
     public int HP = 100, bulbs = 10;
     public float speed = 10;
     public UIManager uiManager;
@@ -17,13 +18,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool APressed = Input.GetKey("a");
-        bool DPressed = Input.GetKey("d");
-        if (APressed == DPressed) {}
-        else if (APressed && transform.position.x >= -8) transform.Translate(new Vector2(-Time.deltaTime * speed, 0));
-        else if (DPressed && transform.position.x <= 8) transform.Translate(new Vector2(Time.deltaTime * speed, 0));
+        bool shouldGoLeft = Input.GetKey("a") || goLeftMobile.pressed;
+        bool shouldGoRight = Input.GetKey("d") || goRightMobile.pressed;
+        bool shouldFire = Input.GetKeyDown("space") || fireMobile.pressed;
+        fireMobile.pressed = false;
+        if (shouldGoLeft == shouldGoRight) {}
+        else if (shouldGoLeft && transform.position.x >= -8) transform.Translate(new Vector2(-Time.deltaTime * speed, 0));
+        else if (shouldGoRight && transform.position.x <= 8) transform.Translate(new Vector2(Time.deltaTime * speed, 0));
 
-        if (Input.GetKeyDown("space")) Instantiate(bullet, transform.position, transform.rotation);
+        if (shouldFire) Instantiate(bullet, transform.position, transform.rotation);
     }
 
     public void AddHP(int value) {
@@ -38,5 +41,23 @@ public class PlayerController : MonoBehaviour
         else bulbs += value;
         //Debug.Log($"Updated bulbs to {bulbs}");
         uiManager.UpdateCounter(HP, bulbs);
+    }
+    public void LeftDown() {
+        //
+    }
+    public void LeftUp() {
+        //
+    }
+    public void RightDown() {
+        //
+    }
+    public void RightUp() {
+        //
+    }
+    public void FireDown() {
+        //
+    }
+    public void FireUp() {
+        //
     }
 }
