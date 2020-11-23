@@ -5,13 +5,16 @@ using UnityEngine;
 public class MobileDeviceFeatures : MonoBehaviour
 {
     public bool forceShow = false;
-    public GameObject UIControls;
+    public GameObject[] UIControls = {};
     // Start is called before the first frame update
     void Start()
     {
         if (Application.platform == RuntimePlatform.Android || forceShow) {
             Debug.Log("MobileDeviceFeatures: Mobile device detected");
-            UIControls.SetActive(true);
+            foreach (GameObject c in UIControls)
+            {
+                c.SetActive(true);
+            }
         }
     }
 

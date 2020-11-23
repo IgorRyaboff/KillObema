@@ -514,14 +514,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 518465214}
-  - component: {fileID: 518465215}
   m_Layer: 5
   m_Name: MobileControls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &518465214
 RectTransform:
   m_ObjectHideFlags: 0
@@ -544,18 +543,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &518465215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 518465213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10b4c0a4c8de0fd499a357d6ee1e5ca4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,7 +663,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -469.13, y: -268.77}
+  m_AnchoredPosition: {x: -469.13, y: -270.47}
   m_SizeDelta: {x: 85.878525, y: 76.560455}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &625320918
@@ -1854,7 +1841,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -469.13, y: -270.474}
+  m_AnchoredPosition: {x: -482.97, y: -270.474}
   m_SizeDelta: {x: 85.878525, y: 76.560455}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1120349939
@@ -2454,6 +2441,7 @@ GameObject:
   - component: {fileID: 1731461503}
   - component: {fileID: 1731461504}
   - component: {fileID: 1731461505}
+  - component: {fileID: 1731461506}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2714,6 +2702,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &1731461506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731461500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b4c0a4c8de0fd499a357d6ee1e5ca4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceShow: 0
+  UIControls: {fileID: 518465213}
 --- !u!1 &1758195234
 GameObject:
   m_ObjectHideFlags: 0
@@ -3057,7 +3059,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -485.3927, y: -261.7978}
-  m_SizeDelta: {x: 33.65126, y: 30}
+  m_SizeDelta: {x: 33.651245, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1846928344
 MonoBehaviour:
