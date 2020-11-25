@@ -11,7 +11,7 @@ public class HPModifierObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+        playerController = GameObject.Find("PlayerController").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame

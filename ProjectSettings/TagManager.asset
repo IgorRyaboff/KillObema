@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - HPModifierObject
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -6,9 +6,15 @@ public class PauseController : MonoBehaviour
 {
     public GameObject gameplayObjects;
     public UIManager uiMan;
+    bool paused = false;
 
-    public void SetPause(bool value) {
-        gameplayObjects.SetActive(!value);
-        uiMan.SetPause(value);
+    public void Start() {
+    }
+
+    public void SetPause() {
+        paused = !paused;
+        gameplayObjects.SetActive(!paused);
+        uiMan.SetPause(paused);
+        Debug.Log("Pause state set to " + paused);
     }
 }

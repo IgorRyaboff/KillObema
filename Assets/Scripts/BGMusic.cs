@@ -13,7 +13,7 @@ public class BGMusic : MonoBehaviour
     void Start()
     {
         audio = gameObject.GetComponent<AudioSource>();
-        Reset(1);
+        Reset(0);
     }
 
     void Update() {
@@ -22,6 +22,7 @@ public class BGMusic : MonoBehaviour
     }
 
     public void Reset(int state) {
+        if (audio == null) return;
         AudioClip[] clips;
         if (state == 0) clips = menuClips;
         else clips = ingameClips;
